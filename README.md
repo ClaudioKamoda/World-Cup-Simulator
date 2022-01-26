@@ -20,3 +20,8 @@ npm run serve
 ### Customize configuration
 
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+### January 26, 2022:
+
+-   Created repo and setup the project.
+-   Setup Sass.
