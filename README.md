@@ -25,3 +25,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 -   Created repo and setup the project.
 -   Setup Sass.
+
+### January 27, 2022: 
+
+- Installed **_Json Server_**.
