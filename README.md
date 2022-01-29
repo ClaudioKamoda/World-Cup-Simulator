@@ -33,3 +33,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ### January 28, 2022:
 
 -   Making global Sass.
+
+### January 29, 2022:
+
+-   Figured out the best way to add country flags to the project. Tried **_flag-icons_** but it didn't work. Decided to go with basic png flaticons.

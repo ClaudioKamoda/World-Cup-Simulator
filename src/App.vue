@@ -2,6 +2,8 @@
 	<div id="app">
 		<img alt="Vue logo" src="./assets/logo.png" />
 		<p>teste</p>
+		<img src="./assets/flags/brazil.png" alt="" />
+		<img src="./assets/flags/france.png" alt="" />
 		<HelloWorld msg="Welcome to Your Vue.js App" />
 	</div>
 </template>
@@ -25,5 +27,9 @@ export default {
 	text-align: center;
 	color: $red;
 	margin-top: 60px;
+
+	img {
+		width: 50px;
+	}
 }
 </style>
