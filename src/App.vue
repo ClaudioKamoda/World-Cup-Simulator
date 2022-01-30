@@ -1,35 +1,20 @@
 <template>
 	<div id="app">
-		<img alt="Vue logo" src="./assets/logo.png" />
-		<p>teste</p>
-		<img src="./assets/flags/brazil.png" alt="" />
-		<img src="./assets/flags/france.png" alt="" />
-		<HelloWorld msg="Welcome to Your Vue.js App" />
+		<Match/>
 	</div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Match from './components/Match.vue'
 
 export default {
 	name: 'App',
 	components: {
-		HelloWorld
+		Match
 	}
 }
 </script>
 
 <style lang="scss" scoped>
-#app {
-	font-family: Avenir, Helvetica, Arial, sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	text-align: center;
-	color: $red;
-	margin-top: 60px;
 
-	img {
-		width: 50px;
-	}
-}
 </style>

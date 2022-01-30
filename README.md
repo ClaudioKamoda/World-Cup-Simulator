@@ -37,3 +37,10 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ### January 29, 2022:
 
 -   Figured out the best way to add country flags to the project. Tried **_flag-icons_** but it didn't work. Decided to go with basic png flaticons.
+
+### January 30, 2022:
+
+- Added global css.
+- Created **_Match_** component.
+- Created **_mixins.scss_** to help with standard styles.
+- Added basic style to **_Match_** component.
