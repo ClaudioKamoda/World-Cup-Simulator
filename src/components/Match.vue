@@ -3,13 +3,15 @@
     <div class="match__topText">
       <p><span>00:00</span> - <span>{{stadiumName}}</span></p>
     </div>
-    <img class="match__flagA" src="../assets/flags/brazil.png"/>
-    <p class="match__teamA">{{teamA}}</p>
-    <p class="match__scoreA">#</p>
-    <p class="match__cross">x</p>
-    <p class="match__scoreB">#</p>
-    <p class="match__teamB">{{teamB}}</p>
-    <img class="match__flagB" src="../assets/flags/france.png"/>
+    <div class="match__data">
+      <img class="match__data--flagA" src="../assets/flags/brazil.png"/>
+      <p class="match__data--teamA">{{teamA}}</p>
+      <p class="match__data--scoreA">#</p>
+      <p class="match__data--cross">x</p>
+      <p class="match__data--scoreB">#</p>
+      <p class="match__data--teamB">{{teamB}}</p>
+      <img class="match__data--flagB" src="../assets/flags/france.png"/>
+    </div>
   </div>
 </template>
 
@@ -36,13 +38,22 @@ export default{
     "flagA teamA scoreA cross scoreB teamB flagB";
   gap: 5px;
 
+  background-color: white;
+  border-radius: 8px;
+  width: fit-content;
+  padding: 5px 15px;
+  font-size: 1.125rem;
+
   &__topText{
     grid-area: stadium;
+    place-self: center;
   }
   
   img{
     width:40px;
   }
+
+  &__data
 
   &__flagA{
     grid-area: flagA;
@@ -50,22 +61,27 @@ export default{
 
   &__teamA{
     grid-area: teamA;
+    place-self: center;
   }
 
   &__scoreA{
     grid-area: scoreA;
+    place-self: center;
   }
 
   &__cross{
     grid-area: cross;
+    place-self: center;
   }
 
   &__scoreB{
     grid-area: scoreB;
+    place-self: center;
   }
 
   &__teamB{
     grid-area: teamB;
+    place-self:center;
   }
 
   &__flagB{

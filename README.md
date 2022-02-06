@@ -47,3 +47,4 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ### February 06, 2022:
 
+- Added grid to **_Match_** component.
