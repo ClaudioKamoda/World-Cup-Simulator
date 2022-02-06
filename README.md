@@ -44,3 +44,6 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 - Created **_Match_** component.
 - Created **_mixins.scss_** to help with standard styles.
 - Added basic style to **_Match_** component.
+
+### February 06, 2022:
+

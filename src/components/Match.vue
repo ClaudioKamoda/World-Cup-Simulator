@@ -3,15 +3,13 @@
     <div class="match__topText">
       <p><span>00:00</span> - <span>{{stadiumName}}</span></p>
     </div>
-    <div class="match__data">
-      <img src="../assets/flags/brazil.png" alt="" />
-      <p>{{teamA}}</p>
-      <p>#</p>
-      <p>x</p>
-      <p>#</p>
-      <p>{{teamB}}</p>
-      <img src="../assets/flags/france.png" alt="" />
-    </div>
+    <img class="match__flagA" src="../assets/flags/brazil.png"/>
+    <p class="match__teamA">{{teamA}}</p>
+    <p class="match__scoreA">#</p>
+    <p class="match__cross">x</p>
+    <p class="match__scoreB">#</p>
+    <p class="match__teamB">{{teamB}}</p>
+    <img class="match__flagB" src="../assets/flags/france.png"/>
   </div>
 </template>
 
@@ -29,14 +27,49 @@ export default{
 </script>
 
 <style lang="scss" scoped>
-img{
-  width: 50px;
-}
 .match{
-  @include Flexbox(column);
-  &__data{
-    @include Flexbox();
-    gap: 5px;
+  display: grid;
+  grid-template-rows: 25px 40px;
+  grid-template-columns: 40px 40px 20px 10px 20px 40px 40px;
+  grid-template-areas: 
+    ". stadium stadium stadium stadium stadium ."
+    "flagA teamA scoreA cross scoreB teamB flagB";
+  gap: 5px;
+
+  &__topText{
+    grid-area: stadium;
+  }
+  
+  img{
+    width:40px;
+  }
+
+  &__flagA{
+    grid-area: flagA;
+  }
+
+  &__teamA{
+    grid-area: teamA;
+  }
+
+  &__scoreA{
+    grid-area: scoreA;
+  }
+
+  &__cross{
+    grid-area: cross;
+  }
+
+  &__scoreB{
+    grid-area: scoreB;
+  }
+
+  &__teamB{
+    grid-area: teamB;
+  }
+
+  &__flagB{
+    grid-area: flagB;
   }
 }
 </style>
