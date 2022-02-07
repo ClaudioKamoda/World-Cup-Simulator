@@ -56,3 +56,6 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 -   Added edit button to **_Match_** component.
 -   Installed **_feather-icons_**.
 -   Added edit icon to edit button.
+-   Added edit logic to the component.
+-   Edition is working.
+-   Added confirm icon to edit button when editing.

@@ -8,12 +8,21 @@
 		</div>
 		<img class="match__flagA" :src="imagePathTeamA" />
 		<p class="match__teamA">{{ matchData.team_A }}</p>
-		<p class="match__scoreA">{{ matchData.score_A }}</p>
+		<p class="match__scoreA" v-if="!isEditing">{{ scoreA }}</p>
+		<form class="match__scoreA" v-if="isEditing">
+			<input type="text" v-model="scoreA" />
+		</form>
 		<p class="match__cross">x</p>
-		<p class="match__scoreB">{{ matchData.score_B }}</p>
+		<p class="match__scoreB" v-if="!isEditing">{{ scoreB }}</p>
+		<form class="match__scoreB" v-if="isEditing">
+			<input type="text" v-model="scoreB" />
+		</form>
 		<p class="match__teamB">{{ matchData.team_B }}</p>
 		<img class="match__flagB" :src="imagePathTeamB" />
-		<div class="edit" v-html="editIcon" @click="enableEdit"></div>
+		<div class="edit" @click="enableEdit" :class="editButtonClass">
+			<div v-html="editIcon" v-if="!isEditing"></div>
+			<div v-html="closeIcon" v-if="isEditing"></div>
+		</div>
 	</div>
 </template>
 
@@ -34,19 +43,31 @@ export default {
 		},
 		editIcon() {
 			return feather.icons['edit-3'].toSvg({
-				class: 'edit__icon',
 				width: '16px',
 				height: '16px'
 			})
+		},
+		closeIcon() {
+			return feather.icons.check.toSvg({
+				width: '16px',
+				height: '16px'
+			})
+		},
+		editButtonClass() {
+			return this.isEditing ? 'bg-green' : ''
 		}
 	},
 	data() {
 		return {
-			isEditing: false
+			isEditing: false,
+			scoreA: this.matchData.score_A,
+			scoreB: this.matchData.score_B
 		}
 	},
 	methods: {
-		enableEdit() {}
+		enableEdit() {
+			this.isEditing = !this.isEditing
+		}
 	}
 }
 </script>
@@ -55,7 +76,7 @@ export default {
 .match {
 	display: grid;
 	grid-template-rows: 25px 40px;
-	grid-template-columns: 40px 40px 20px 10px 20px 40px 40px;
+	grid-template-columns: 40px 40px 30px 10px 30px 40px 40px;
 	grid-template-areas:
 		'stadium stadium stadium stadium stadium stadium stadium'
 		'flagA teamA scoreA cross scoreB teamB flagB';
@@ -69,6 +90,14 @@ export default {
 	font-size: 1.125rem;
 
 	position: relative;
+
+	form {
+		input[type='text'] {
+			width: 30px;
+			font-size: 1.125rem;
+			text-align: center;
+		}
+	}
 
 	&__topText {
 		grid-area: stadium;
@@ -126,6 +155,10 @@ export default {
 
 		&:hover {
 			top: -5px;
+		}
+
+		&.bg-green {
+			background-color: $green;
 		}
 	}
 }

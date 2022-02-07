@@ -18,7 +18,7 @@ export default {
 				{
 					id: 1,
 					team_A: 'BRA',
-					score_A: '0',
+					score_A: '2',
 					team_B: 'GER',
 					score_B: '0',
 					match_time: '13:00',
