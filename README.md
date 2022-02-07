@@ -40,11 +40,12 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ### January 30, 2022:
 
-- Added **_global.scss_**.
-- Created **_Match_** component.
-- Created **_mixins.scss_** to help with standard styles.
-- Added basic style to **_Match_** component.
+-   Added **_global.scss_**.
+-   Created **_Match_** component.
+-   Created **_mixins.scss_** to help with standard styles.
+-   Added basic style to **_Match_** component.
 
 ### February 06, 2022:
 
-- Added grid to **_Match_** component.
+-   Added grid to **_Match_** component.
+-   Structured **_Match_** component to receive external data.
