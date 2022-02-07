@@ -60,3 +60,5 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 -   Edition is working.
 -   Added confirm icon to edit button when editing.
 -   Handled some small usability issues like the possibility to leave the input blank.
+
+![Match component](https://github.com/ClaudioKamoda/World-Cup-Simulator/blob/main/src/assets/progressGifs/feb0722.gif)
