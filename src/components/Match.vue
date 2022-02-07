@@ -8,11 +8,12 @@
 		</div>
 		<img class="match__flagA" :src="imagePathTeamA" />
 		<p class="match__teamA">{{ matchData.team_A }}</p>
-		<p class="match__scoreA">#</p>
+		<p class="match__scoreA">{{ matchData.score_A }}</p>
 		<p class="match__cross">x</p>
-		<p class="match__scoreB">#</p>
+		<p class="match__scoreB">{{ matchData.score_B }}</p>
 		<p class="match__teamB">{{ matchData.team_B }}</p>
-		<img class="match__flagB" :src="imagePathTeamA" />
+		<img class="match__flagB" :src="imagePathTeamB" />
+		<div class="edit"></div>
 	</div>
 </template>
 
@@ -29,9 +30,6 @@ export default {
 		imagePathTeamB() {
 			return require(`../assets/flags/${this.matchData.team_B}.png`)
 		}
-	},
-	data() {
-		return {}
 	}
 }
 </script>
@@ -42,9 +40,9 @@ export default {
 	grid-template-rows: 25px 40px;
 	grid-template-columns: 40px 40px 20px 10px 20px 40px 40px;
 	grid-template-areas:
-		'. stadium stadium stadium stadium stadium .'
+		'stadium stadium stadium stadium stadium stadium stadium'
 		'flagA teamA scoreA cross scoreB teamB flagB';
-	gap: 5px;
+	column-gap: 5px;
 
 	background-color: white;
 	border-radius: 8px;
@@ -52,6 +50,8 @@ export default {
 	padding: 5px 15px;
 	margin: 10px;
 	font-size: 1.125rem;
+
+	position: relative;
 
 	&__topText {
 		grid-area: stadium;
@@ -94,6 +94,21 @@ export default {
 
 	&__flagB {
 		grid-area: flagB;
+	}
+
+	.edit {
+		position: absolute;
+		right: -15px;
+		top: 0;
+		background-color: $blue;
+		width: 30px;
+		height: 30px;
+		border-radius: 50%;
+		transition: top 0.3s ease-in;
+
+		&:hover {
+			top: -5px;
+		}
 	}
 }
 </style>

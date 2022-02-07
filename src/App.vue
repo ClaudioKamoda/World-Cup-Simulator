@@ -1,6 +1,6 @@
 <template>
 	<div id="app">
-		<Match :matchData="example" />
+		<Match v-for="match in example" :key="match.id" :matchData="match" />
 	</div>
 </template>
 
@@ -14,13 +14,26 @@ export default {
 	},
 	data() {
 		return {
-			example: {
-				id: 1,
-				team_A: 'BRA',
-				team_B: 'BEL',
-				match_time: '13:00',
-				stadium: 'Doha'
-			}
+			example: [
+				{
+					id: 1,
+					team_A: 'BRA',
+					score_A: '0',
+					team_B: 'GER',
+					score_B: '0',
+					match_time: '13:00',
+					stadium: 'Education City'
+				},
+				{
+					id: 2,
+					team_A: 'FRA',
+					score_A: '0',
+					team_B: 'ARG',
+					score_B: '0',
+					match_time: '16:00',
+					stadium: 'Ahmed bin Ali'
+				}
+			]
 		}
 	}
 }
