@@ -59,3 +59,4 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 -   Added edit logic to the component.
 -   Edition is working.
 -   Added confirm icon to edit button when editing.
+-   Handled some small usability issues like the possibility to leave the input blank.

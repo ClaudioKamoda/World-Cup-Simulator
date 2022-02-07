@@ -10,16 +10,16 @@
 		<p class="match__teamA">{{ matchData.team_A }}</p>
 		<p class="match__scoreA" v-if="!isEditing">{{ scoreA }}</p>
 		<form class="match__scoreA" v-if="isEditing">
-			<input type="text" v-model="scoreA" />
+			<input type="text" v-model="scoreA" maxlength="2" />
 		</form>
 		<p class="match__cross">x</p>
 		<p class="match__scoreB" v-if="!isEditing">{{ scoreB }}</p>
 		<form class="match__scoreB" v-if="isEditing">
-			<input type="text" v-model="scoreB" />
+			<input type="text" v-model="scoreB" maxlength="2" />
 		</form>
 		<p class="match__teamB">{{ matchData.team_B }}</p>
 		<img class="match__flagB" :src="imagePathTeamB" />
-		<div class="edit" @click="enableEdit" :class="editButtonClass">
+		<div class="edit" @click="toggleEdit" :class="editButtonClass">
 			<div v-html="editIcon" v-if="!isEditing"></div>
 			<div v-html="closeIcon" v-if="isEditing"></div>
 		</div>
@@ -61,12 +61,20 @@ export default {
 		return {
 			isEditing: false,
 			scoreA: this.matchData.score_A,
-			scoreB: this.matchData.score_B
+			scoreHolderA: this.matchData.score_A,
+			scoreB: this.matchData.score_B,
+			scoreHolderB: this.matchData.score_B
 		}
 	},
 	methods: {
-		enableEdit() {
+		toggleEdit() {
 			this.isEditing = !this.isEditing
+
+			if (this.scoreA == '') this.scoreA = this.scoreHolderA
+			if (this.scoreB == '') this.scoreB = this.scoreHolderB
+
+			this.scoreHolderA = this.scoreA
+			this.scoreHolderB = this.scoreB
 		}
 	}
 }

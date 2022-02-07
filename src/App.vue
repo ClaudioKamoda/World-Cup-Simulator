@@ -18,18 +18,18 @@ export default {
 				{
 					id: 1,
 					team_A: 'BRA',
-					score_A: '2',
+					score_A: 2,
 					team_B: 'GER',
-					score_B: '0',
+					score_B: 0,
 					match_time: '13:00',
 					stadium: 'Education City'
 				},
 				{
 					id: 2,
 					team_A: 'FRA',
-					score_A: '0',
+					score_A: 0,
 					team_B: 'ARG',
-					score_B: '0',
+					score_B: 0,
 					match_time: '16:00',
 					stadium: 'Ahmed bin Ali'
 				}
