@@ -49,3 +49,8 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 -   Added grid to **_Match_** component.
 -   Structured **_Match_** component to receive external data.
+
+### February 07, 2022:
+
+-   Small adjustments.
+-   Added edit button to **_Match_** component.
