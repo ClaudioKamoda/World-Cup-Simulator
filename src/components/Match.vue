@@ -2,29 +2,36 @@
 	<div class="match">
 		<div class="match__topText">
 			<p>
-				<span>00:00</span> - <span>{{ stadiumName }}</span>
+				<span>{{ matchData.match_time }}</span> -
+				<span>{{ matchData.stadium }}</span>
 			</p>
 		</div>
-		<img class="match__flagA" src="../assets/flags/brazil.png" />
-		<p class="match__teamA">{{ teamA }}</p>
+		<img class="match__flagA" :src="imagePathTeamA" />
+		<p class="match__teamA">{{ matchData.team_A }}</p>
 		<p class="match__scoreA">#</p>
 		<p class="match__cross">x</p>
 		<p class="match__scoreB">#</p>
-		<p class="match__teamB">{{ teamB }}</p>
-		<img class="match__flagB" src="../assets/flags/france.png" />
+		<p class="match__teamB">{{ matchData.team_B }}</p>
+		<img class="match__flagB" :src="imagePathTeamA" />
 	</div>
 </template>
 
 <script>
 export default {
 	name: 'Match',
-	props: {},
-	data() {
-		return {
-			teamA: 'BRA',
-			teamB: 'FRA',
-			stadiumName: 'Stadium'
+	props: {
+		matchData: {}
+	},
+	computed: {
+		imagePathTeamA() {
+			return require(`../assets/flags/${this.matchData.team_A}.png`)
+		},
+		imagePathTeamB() {
+			return require(`../assets/flags/${this.matchData.team_B}.png`)
 		}
+	},
+	data() {
+		return {}
 	}
 }
 </script>
@@ -43,6 +50,7 @@ export default {
 	border-radius: 8px;
 	width: fit-content;
 	padding: 5px 15px;
+	margin: 10px;
 	font-size: 1.125rem;
 
 	&__topText {

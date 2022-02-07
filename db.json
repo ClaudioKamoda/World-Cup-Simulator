@@ -1,7 +1,18 @@
 {
-  "matches":[{
-    "id": 1,
-    "team-1": "Brazil",
-    "team-2": "Belgium"
-  }]
+	"matches": [
+		{
+			"id": 1,
+			"team_A": "BRA",
+			"team_B": "BEL",
+			"match_time": "13:00",
+			"stadium": "Doha"
+		},
+		{
+			"id": 2,
+			"team_A": "FRA",
+			"team_B": "ENG",
+			"match_time": "16:00",
+			"stadium": "Doha"
+		}
+	]
 }
