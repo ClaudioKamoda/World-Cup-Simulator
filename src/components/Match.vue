@@ -13,11 +13,13 @@
 		<p class="match__scoreB">{{ matchData.score_B }}</p>
 		<p class="match__teamB">{{ matchData.team_B }}</p>
 		<img class="match__flagB" :src="imagePathTeamB" />
-		<div class="edit"></div>
+		<div class="edit" v-html="editIcon" @click="enableEdit"></div>
 	</div>
 </template>
 
 <script>
+import feather from 'feather-icons'
+
 export default {
 	name: 'Match',
 	props: {
@@ -29,7 +31,22 @@ export default {
 		},
 		imagePathTeamB() {
 			return require(`../assets/flags/${this.matchData.team_B}.png`)
+		},
+		editIcon() {
+			return feather.icons['edit-3'].toSvg({
+				class: 'edit__icon',
+				width: '16px',
+				height: '16px'
+			})
 		}
+	},
+	data() {
+		return {
+			isEditing: false
+		}
+	},
+	methods: {
+		enableEdit() {}
 	}
 }
 </script>
@@ -105,6 +122,7 @@ export default {
 		height: 30px;
 		border-radius: 50%;
 		transition: top 0.3s ease-in;
+		@include Flexbox();
 
 		&:hover {
 			top: -5px;

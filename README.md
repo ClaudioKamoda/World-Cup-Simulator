@@ -54,3 +54,5 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 -   Small adjustments.
 -   Added edit button to **_Match_** component.
+-   Installed **_feather-icons_**.
+-   Added edit icon to edit button.
