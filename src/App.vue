@@ -1,16 +1,25 @@
 <template>
 	<div id="app">
-		<Match v-for="match in example" :key="match.id" :matchData="match" />
+		<NavBar />
+		<div>
+			<Match
+				v-for="match in example"
+				:key="match.id"
+				:matchData="match"
+			/>
+		</div>
 	</div>
 </template>
 
 <script>
 import Match from './components/Match.vue'
+import NavBar from './components/NavBar.vue'
 
 export default {
 	name: 'App',
 	components: {
-		Match
+		Match,
+		NavBar
 	},
 	data() {
 		return {
@@ -32,6 +41,42 @@ export default {
 					score_B: 0,
 					match_time: '16:00',
 					stadium: 'Ahmed bin Ali'
+				},
+				{
+					id: 3,
+					team_A: 'FRA',
+					score_A: 0,
+					team_B: 'BRA',
+					score_B: 0,
+					match_time: '16:00',
+					stadium: 'Ahmed bin Ali'
+				},
+				{
+					id: 4,
+					team_A: 'GER',
+					score_A: 0,
+					team_B: 'ARG',
+					score_B: 0,
+					match_time: '16:00',
+					stadium: 'Ahmed bin Ali'
+				},
+				{
+					id: 5,
+					team_A: 'BRA',
+					score_A: 0,
+					team_B: 'ARG',
+					score_B: 0,
+					match_time: '16:00',
+					stadium: 'Ahmed bin Ali'
+				},
+				{
+					id: 6,
+					team_A: 'FRA',
+					score_A: 0,
+					team_B: 'GER',
+					score_B: 0,
+					match_time: '16:00',
+					stadium: 'Ahmed bin Ali'
 				}
 			]
 		}
@@ -43,6 +88,7 @@ export default {
 #app {
 	height: 100vh;
 	width: 100vw;
-	@include Flexbox($direction: column);
+	@include Flexbox();
+	gap: 10px;
 }
 </style>
