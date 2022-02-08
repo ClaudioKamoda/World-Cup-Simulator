@@ -88,7 +88,7 @@ export default {
 #app {
 	height: 100vh;
 	width: 100vw;
-	@include Flexbox();
+	@include Flexbox($justify: space-between);
 	gap: 10px;
 }
 </style>

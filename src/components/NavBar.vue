@@ -55,12 +55,14 @@ export default {
 			border-radius: 8px;
 			width: 70px;
 			height: 70px;
+			color: white;
 			background-color: $blue;
 			cursor: pointer;
 			@include Flexbox();
 
 			&.active {
 				background-color: yellow;
+				color: black;
 			}
 		}
 	}
