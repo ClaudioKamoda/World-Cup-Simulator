@@ -62,3 +62,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 -   Handled some small usability issues like the possibility to leave the input blank.
 
 ![Match component](https://github.com/ClaudioKamoda/World-Cup-Simulator/blob/main/src/assets/progressGifs/feb0722.gif)
+
+### February 08, 2022:
+
+-   Created **_NavBar_** component.
