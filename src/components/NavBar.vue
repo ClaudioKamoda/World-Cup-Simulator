@@ -28,6 +28,8 @@ export default {
 	methods: {
 		changeNavigation(group) {
 			this.currentNavigation = group
+
+			this.$store.dispatch('changeNavigation', group)
 		},
 		isActive(group) {
 			return group === this.currentNavigation

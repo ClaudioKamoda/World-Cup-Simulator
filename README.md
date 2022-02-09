@@ -66,3 +66,4 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ### February 08, 2022:
 
 -   Created **_NavBar_** component.
+-   Setup **_Vuex_**.
