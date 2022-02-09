@@ -94,7 +94,6 @@ export default {
 	border-radius: 8px;
 	width: fit-content;
 	padding: 5px 15px;
-	margin: 10px 20px;
 	font-size: 1.125rem;
 
 	position: relative;

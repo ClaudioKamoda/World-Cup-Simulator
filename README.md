@@ -67,3 +67,8 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 -   Created **_NavBar_** component.
 -   Setup **_Vuex_**.
+
+### February 09, 2022:
+
+-   Created **_MatchList_** component to hold **_Match_** components.
+-   Added logic to change matches shown when changing groups.
