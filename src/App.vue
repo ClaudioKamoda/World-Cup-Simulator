@@ -1,6 +1,7 @@
 <template>
 	<div id="app">
 		<NavBar />
+		<Group />
 		<MatchList />
 	</div>
 </template>
@@ -8,14 +9,15 @@
 <script>
 import MatchList from './components/MatchList.vue'
 import NavBar from './components/NavBar.vue'
+import Group from './components/Group.vue'
 
 export default {
 	name: 'App',
 	components: {
 		MatchList,
-		NavBar
-	},
-	data() {}
+		NavBar,
+		Group
+	}
 }
 </script>
 

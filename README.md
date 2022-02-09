@@ -73,3 +73,4 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 -   Created **_MatchList_** component to hold **_Match_** components.
 -   Added logic to change matches shown when changing groups.
 -   Structured **_db.json_**.
+-   Created **_Group_** component.
