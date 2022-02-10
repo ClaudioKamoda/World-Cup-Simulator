@@ -74,3 +74,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 -   Added logic to change matches shown when changing groups.
 -   Structured **_db.json_**.
 -   Created **_Group_** component.
+
+### February 10, 2022:
+
+-   Added **_Vue Router_**.
