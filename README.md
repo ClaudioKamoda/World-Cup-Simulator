@@ -78,3 +78,5 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ### February 10, 2022:
 
 -   Added **_Vue Router_**.
+-   Installed **_axios_**.
+-   Managed the requests and delivered data to store and group component.

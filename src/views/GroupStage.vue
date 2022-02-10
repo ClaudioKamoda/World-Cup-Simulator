@@ -17,14 +17,32 @@ export default {
 		NavBar,
 		Group,
 		MatchList
+	},
+	computed: {
+		groupGeneralData() {
+			return this.$store.state.groupsDataObject
+		}
+	},
+	data() {
+		return {
+			groupsData: {}
+		}
+	},
+	beforeCreate() {
+		this.$store.dispatch('getAllData')
+	},
+	watch: {
+		groupGeneralData() {
+			//insert data into local storage
+		}
 	}
 }
 </script>
 
 <style lang="scss" scoped>
 .groupStage {
+	width: 100vw;
 	height: 100vh;
-	width: 100%;
-	@include Flexbox();
+	@include Flexbox($justify: space-between);
 }
 </style>

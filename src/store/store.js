@@ -1,12 +1,14 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import 'es6-promise/auto'
+import axios from 'axios'
 
 Vue.use(Vuex)
 
 export const store = new Vuex.Store({
 	state: {
 		selectedGroup: '',
+		groupsDataObject: {},
 		matches: {
 			A: [
 				{
@@ -67,56 +69,56 @@ export const store = new Vuex.Store({
 			B: [
 				{
 					id: 1,
-					team_A: 'BRA',
+					team_A: 'ENG',
 					score_A: 0,
-					team_B: 'GER',
+					team_B: 'SKO',
 					score_B: 0,
-					match_time: '19:00',
+					match_time: '13:00',
 					stadium: 'Education City'
 				},
 				{
 					id: 2,
-					team_A: 'FRA',
+					team_A: 'DEN',
 					score_A: 0,
-					team_B: 'ARG',
+					team_B: 'SPA',
 					score_B: 0,
-					match_time: '19:00',
+					match_time: '16:00',
 					stadium: 'Ahmed bin Ali'
 				},
 				{
 					id: 3,
-					team_A: 'FRA',
+					team_A: 'SKO',
 					score_A: 0,
-					team_B: 'BRA',
+					team_B: 'DEN',
 					score_B: 0,
-					match_time: '19:00',
+					match_time: '16:00',
 					stadium: 'Ahmed bin Ali'
 				},
 				{
 					id: 4,
-					team_A: 'GER',
+					team_A: 'SPA',
 					score_A: 0,
-					team_B: 'ARG',
+					team_B: 'ENG',
 					score_B: 0,
-					match_time: '19:00',
+					match_time: '16:00',
 					stadium: 'Ahmed bin Ali'
 				},
 				{
 					id: 5,
-					team_A: 'BRA',
+					team_A: 'SKO',
 					score_A: 0,
-					team_B: 'ARG',
+					team_B: 'SPA',
 					score_B: 0,
-					match_time: '19:00',
+					match_time: '16:00',
 					stadium: 'Ahmed bin Ali'
 				},
 				{
 					id: 6,
-					team_A: 'FRA',
+					team_A: 'DEN',
 					score_A: 0,
-					team_B: 'GER',
+					team_B: 'ENG',
 					score_B: 0,
-					match_time: '19:00',
+					match_time: '16:00',
 					stadium: 'Ahmed bin Ali'
 				}
 			]
@@ -125,11 +127,19 @@ export const store = new Vuex.Store({
 	mutations: {
 		changeNavigation(state, group) {
 			state.selectedGroup = group
+		},
+		getAllData(state, groups) {
+			state.groupsDataObject = groups
 		}
 	},
 	actions: {
 		changeNavigation(context, group) {
 			context.commit('changeNavigation', group)
+		},
+		getAllData(context) {
+			axios.get('http://localhost:3000/groups').then(response => {
+				context.commit('getAllData', response.data)
+			})
 		}
 	}
 })

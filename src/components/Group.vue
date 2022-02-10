@@ -1,7 +1,7 @@
 <template>
 	<table>
 		<tr>
-			<th>Group A</th>
+			<th>{{ group.name }}</th>
 			<th>P</th>
 			<th>MP</th>
 			<th>W</th>
@@ -11,53 +11,23 @@
 			<th>GA</th>
 			<th>GD</th>
 		</tr>
-		<tr>
+		<tr v-for="(team, index) in group.teams" :key="index">
 			<td>
-				<p>1</p>
-				<img src="" alt="" />
-				<p>Nome</p>
+				<p>{{ index + 1 }}</p>
+				<img
+					:src="imagePath(team.team_short)"
+					:alt="altText(team.name)"
+				/>
+				<p>{{ team.team_name }}</p>
 			</td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
+			<td>{{ team.points }}</td>
+			<td>{{ team.matches_played }}</td>
+			<td>{{ team.wins }}</td>
+			<td>{{ team.draws }}</td>
+			<td>{{ team.losses }}</td>
+			<td>{{ team.goals_forward }}</td>
+			<td>{{ team.goals_against }}</td>
+			<td>{{ team.goal_difference }}</td>
 		</tr>
 	</table>
 </template>
@@ -70,14 +40,23 @@ export default {
 			return this.$store.state.selectedGroup
 		}
 	},
+	created() {
+		this.getGroupData()
+	},
 	data() {
 		return {
-			group: []
+			group: {}
 		}
 	},
 	methods: {
 		getGroupData() {
-			//get data here
+			this.group = this.$store.state.groupsDataObject[this.selectedGroup]
+		},
+		imagePath(name) {
+			return require(`../assets/flags/${name}.png`)
+		},
+		altText(name) {
+			return `${name} flag`
 		}
 	},
 	watch: {
