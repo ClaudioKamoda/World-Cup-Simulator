@@ -3,7 +3,8 @@
 		"name": "Group A",
 		"teams": [
 			{
-				"team_name": "",
+				"team_name": "Brazil",
+				"team_short": "BRA",
 				"points": 0,
 				"matches_played": 0,
 				"wins": 0,
@@ -14,7 +15,8 @@
 				"goal_difference": 0
 			},
 			{
-				"team_name": "",
+				"team_name": "Argentina",
+				"team_short": "ARG",
 				"points": 0,
 				"matches_played": 0,
 				"wins": 0,
@@ -25,7 +27,8 @@
 				"goal_difference": 0
 			},
 			{
-				"team_name": "",
+				"team_name": "France",
+				"team_short": "FRA",
 				"points": 0,
 				"matches_played": 0,
 				"wins": 0,
@@ -36,7 +39,8 @@
 				"goal_difference": 0
 			},
 			{
-				"team_name": "",
+				"team_name": "Germany",
+				"team_short": "GER",
 				"points": 0,
 				"matches_played": 0,
 				"wins": 0,
@@ -108,7 +112,8 @@
 		"name": "Group B",
 		"teams": [
 			{
-				"team_name": "",
+				"team_name": "England",
+				"team_short": "ENG",
 				"points": 0,
 				"matches_played": 0,
 				"wins": 0,
@@ -119,7 +124,8 @@
 				"goal_difference": 0
 			},
 			{
-				"team_name": "",
+				"team_name": "Spain",
+				"team_short": "SPA",
 				"points": 0,
 				"matches_played": 0,
 				"wins": 0,
@@ -130,7 +136,8 @@
 				"goal_difference": 0
 			},
 			{
-				"team_name": "",
+				"team_name": "South Korea",
+				"team_short": "SKO",
 				"points": 0,
 				"matches_played": 0,
 				"wins": 0,
@@ -141,7 +148,8 @@
 				"goal_difference": 0
 			},
 			{
-				"team_name": "",
+				"team_name": "Denmark",
+				"team_short": "DEN",
 				"points": 0,
 				"matches_played": 0,
 				"wins": 0,
