@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import 'es6-promise/auto'
-import axios from 'axios'
 
 Vue.use(Vuex)
 
@@ -136,10 +135,6 @@ export const store = new Vuex.Store({
 		changeNavigation(context, group) {
 			context.commit('changeNavigation', group)
 		},
-		getAllData(context) {
-			axios.get('http://localhost:3000/groups').then(response => {
-				context.commit('getAllData', response.data)
-			})
-		}
+		getAllData() {}
 	}
 })

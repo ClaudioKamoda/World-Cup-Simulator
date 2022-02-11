@@ -14,10 +14,7 @@
 		<tr v-for="(team, index) in group.teams" :key="index">
 			<td>
 				<p>{{ index + 1 }}</p>
-				<img
-					:src="imagePath(team.team_short)"
-					:alt="altText(team.name)"
-				/>
+				<img :src="imagePath(team.team_short)" alt="team flag" />
 				<p>{{ team.team_name }}</p>
 			</td>
 			<td>{{ team.points }}</td>
