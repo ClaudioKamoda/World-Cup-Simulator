@@ -1,5 +1,6 @@
 <template>
 	<table>
+		<p>{{ this.test }}</p>
 		<tr>
 			<th>{{ group.name }}</th>
 			<th>P</th>
@@ -35,6 +36,9 @@ export default {
 	computed: {
 		selectedGroup() {
 			return this.$store.state.selectedGroup
+		},
+		test() {
+			return this.$store.state.groupsDataObject.A.name
 		}
 	},
 	created() {

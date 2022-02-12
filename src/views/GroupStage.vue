@@ -28,9 +28,6 @@ export default {
 			groupsData: {}
 		}
 	},
-	beforeCreate() {
-		this.$store.dispatch('getAllData')
-	},
 	watch: {
 		groupGeneralData() {
 			//insert data into local storage
