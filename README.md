@@ -90,3 +90,5 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 -   Uninstalled dependencies.
 -   Styled **_Group_** component.
 -   Added tooltip to table titles.
+
+![Everything](https://github.com/ClaudioKamoda/World-Cup-Simulator/blob/main/src/assets/progressGifs/feb1322.gif)
