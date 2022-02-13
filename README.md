@@ -80,3 +80,13 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 -   Added **_Vue Router_**.
 -   Installed **_axios_**.
 -   Managed the requests and delivered data to store and group component.
+
+### February 12, 2022:
+
+-   Removed the fake API from the project.
+
+### February 13, 2022:
+
+-   Uninstalled dependencies.
+-   Styled **_Group_** component.
+-   Added tooltip to table titles.
